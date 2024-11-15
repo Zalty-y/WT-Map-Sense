@@ -12,5 +12,5 @@ TODO
 TODO
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
-<hr/>
+
 Contributions are welcome! If you'd like to help improve this project, please fork the repository and submit a pull request.
