@@ -1,0 +1,510 @@
+{
+    "level": "levels/avg_container_port.bin",
+    "mission_file": "gamedata/missions/cta/tanks/container_port/container_port_dom.blk",
+    "mission_name": "container_port_Dom",
+    "time_of_day": "noon",
+    "weather": "good",
+    "time_of_battle_ts": 0,
+    "time_of_battle": "1970-01-01 01:00:00",
+    "num_players": 33,
+    "players": [
+        {
+            "player_id": 31,
+            "vehicles": [
+                {
+                    "vehicle": "ussr_t_72av_turms",
+                    "num_appearances": 41
+                },
+                {
+                    "vehicle": "il-4",
+                    "num_appearances": 57
+                },
+                {
+                    "vehicle": "ussr_btr_80a",
+                    "num_appearances": 43
+                }
+            ],
+            "num_appearances": 141
+        },
+        {
+            "player_id": 32,
+            "vehicles": [
+                {
+                    "vehicle": "us_xm1_chrysler",
+                    "num_appearances": 15
+                }
+            ],
+            "num_appearances": 15
+        },
+        {
+            "player_id": 33,
+            "vehicles": [
+                {
+                    "vehicle": "cn_ztz_96a_prot",
+                    "num_appearances": 10
+                },
+                {
+                    "vehicle": "cn_type_69_2g",
+                    "num_appearances": 25
+                }
+            ],
+            "num_appearances": 35
+        },
+        {
+            "player_id": 34,
+            "vehicles": [
+                {
+                    "vehicle": "germ_thyssen_henschel_tam",
+                    "num_appearances": 20
+                }
+            ],
+            "num_appearances": 20
+        },
+        {
+            "player_id": 35,
+            "vehicles": [
+                {
+                    "vehicle": "ussr_t_62m1",
+                    "num_appearances": 29
+                }
+            ],
+            "num_appearances": 29
+        },
+        {
+            "player_id": 36,
+            "vehicles": [
+                {
+                    "vehicle": "ussr_bmp_3",
+                    "num_appearances": 14
+                }
+            ],
+            "num_appearances": 14
+        },
+        {
+            "player_id": 37,
+            "vehicles": [
+                {
+                    "vehicle": "germ_radpanzer_90",
+                    "num_appearances": 17
+                }
+            ],
+            "num_appearances": 17
+        },
+        {
+            "player_id": 38,
+            "vehicles": [
+                {
+                    "vehicle": "a_4e_early",
+                    "num_appearances": 73
+                },
+                {
+                    "vehicle": "us_m60a3_tts",
+                    "num_appearances": 12
+                }
+            ],
+            "num_appearances": 85
+        },
+        {
+            "player_id": 39,
+            "vehicles": [
+                {
+                    "vehicle": "cn_type_59d",
+                    "num_appearances": 53
+                },
+                {
+                    "vehicle": "cn_ztz_88b",
+                    "num_appearances": 30
+                },
+                {
+                    "vehicle": "cn_m_41d",
+                    "num_appearances": 15
+                }
+            ],
+            "num_appearances": 98
+        },
+        {
+            "player_id": 40,
+            "vehicles": [
+                {
+                    "vehicle": "germ_leopard_I",
+                    "num_appearances": 10
+                },
+                {
+                    "vehicle": "germ_thyssen_henschel_tam_2ip",
+                    "num_appearances": 18
+                },
+                {
+                    "vehicle": "germ_panzerjager_tiger",
+                    "num_appearances": 31
+                },
+                {
+                    "vehicle": "germ_wiesel_1_mk20",
+                    "num_appearances": 16
+                }
+            ],
+            "num_appearances": 75
+        },
+        {
+            "player_id": 41,
+            "vehicles": [
+                {
+                    "vehicle": "germ_thyssen_henschel_tam_2ip",
+                    "num_appearances": 17
+                }
+            ],
+            "num_appearances": 17
+        },
+        {
+            "player_id": 42,
+            "vehicles": [
+                {
+                    "vehicle": "germ_thyssen_henschel_tam_2ip",
+                    "num_appearances": 29
+                },
+                {
+                    "vehicle": "alpha_jet_a",
+                    "num_appearances": 75
+                }
+            ],
+            "num_appearances": 104
+        },
+        {
+            "player_id": 43,
+            "vehicles": [
+                {
+                    "vehicle": "sw_strv_103_0",
+                    "num_appearances": 41
+                }
+            ],
+            "num_appearances": 41
+        },
+        {
+            "player_id": 44,
+            "vehicles": [
+                {
+                    "vehicle": "fr_amx_40",
+                    "num_appearances": 42
+                },
+                {
+                    "vehicle": "fr_vextra_105",
+                    "num_appearances": 21
+                }
+            ],
+            "num_appearances": 63
+        },
+        {
+            "player_id": 45,
+            "vehicles": [
+                {
+                    "vehicle": "germ_radpanzer_90",
+                    "num_appearances": 11
+                },
+                {
+                    "vehicle": "germ_leopard_2k",
+                    "num_appearances": 39
+                }
+            ],
+            "num_appearances": 50
+        },
+        {
+            "player_id": 46,
+            "vehicles": [
+                {
+                    "vehicle": "germ_thyssen_henschel_tam_2ip",
+                    "num_appearances": 15
+                },
+                {
+                    "vehicle": "germ_thyssen_henschel_tam",
+                    "num_appearances": 20
+                },
+                {
+                    "vehicle": "germ_sk105_a2",
+                    "num_appearances": 12
+                },
+                {
+                    "vehicle": "fiat_g91_r4_german",
+                    "num_appearances": 24
+                },
+                {
+                    "vehicle": "germ_leopard_I_a1",
+                    "num_appearances": 13
+                }
+            ],
+            "num_appearances": 84
+        },
+        {
+            "player_id": 47,
+            "vehicles": [
+                {
+                    "vehicle": "cn_ztz_96a_prot",
+                    "num_appearances": 39
+                }
+            ],
+            "num_appearances": 39
+        },
+        {
+            "player_id": 48,
+            "vehicles": [
+                {
+                    "vehicle": "germ_flakpz_I_Gepard",
+                    "num_appearances": 13
+                },
+                {
+                    "vehicle": "germ_begleitpanzer_57",
+                    "num_appearances": 18
+                },
+                {
+                    "vehicle": "germ_mkpz_super_m48",
+                    "num_appearances": 17
+                },
+                {
+                    "vehicle": "germ_kpz_t72m1",
+                    "num_appearances": 24
+                }
+            ],
+            "num_appearances": 72
+        },
+        {
+            "player_id": 49,
+            "vehicles": [
+                {
+                    "vehicle": "ussr_object_775",
+                    "num_appearances": 23
+                },
+                {
+                    "vehicle": "ussr_bmp_3",
+                    "num_appearances": 45
+                }
+            ],
+            "num_appearances": 68
+        },
+        {
+            "player_id": 50,
+            "vehicles": [
+                {
+                    "vehicle": "germ_flakpz_I_Gepard",
+                    "num_appearances": 18
+                },
+                {
+                    "vehicle": "germ_leopard_1a5",
+                    "num_appearances": 15
+                },
+                {
+                    "vehicle": "germ_mkpz_super_m48",
+                    "num_appearances": 25
+                }
+            ],
+            "num_appearances": 58
+        },
+        {
+            "player_id": 51,
+            "vehicles": [
+                {
+                    "vehicle": "ussr_t_72av_turms",
+                    "num_appearances": 51
+                },
+                {
+                    "vehicle": "ussr_bmp_2m",
+                    "num_appearances": 31
+                },
+                {
+                    "vehicle": "ussr_t_72b",
+                    "num_appearances": 14
+                }
+            ],
+            "num_appearances": 96
+        },
+        {
+            "player_id": 52,
+            "vehicles": [
+                {
+                    "vehicle": "sw_patria_amv_ctcv_105",
+                    "num_appearances": 37
+                },
+                {
+                    "vehicle": "sw_cv_90105_tml",
+                    "num_appearances": 42
+                }
+            ],
+            "num_appearances": 79
+        },
+        {
+            "player_id": 53,
+            "vehicles": [
+                {
+                    "vehicle": "us_merkava_mk_2b_late",
+                    "num_appearances": 26
+                },
+                {
+                    "vehicle": "us_merkava_mk_1",
+                    "num_appearances": 23
+                },
+                {
+                    "vehicle": "us_xm1_gm",
+                    "num_appearances": 78
+                }
+            ],
+            "num_appearances": 127
+        },
+        {
+            "player_id": 54,
+            "vehicles": [
+                {
+                    "vehicle": "it_vbc_pt2",
+                    "num_appearances": 37
+                },
+                {
+                    "vehicle": "it_of_40_mk_2a",
+                    "num_appearances": 38
+                },
+                {
+                    "vehicle": "it_vcc_80_hitfist_60",
+                    "num_appearances": 20
+                }
+            ],
+            "num_appearances": 95
+        },
+        {
+            "player_id": 55,
+            "vehicles": [
+                {
+                    "vehicle": "germ_kpz_t72m1",
+                    "num_appearances": 14
+                },
+                {
+                    "vehicle": "germ_thyssen_henschel_tam",
+                    "num_appearances": 17
+                }
+            ],
+            "num_appearances": 31
+        },
+        {
+            "player_id": 56,
+            "vehicles": [
+                {
+                    "vehicle": "vampire_fb52a_italy",
+                    "num_appearances": 58
+                },
+                {
+                    "vehicle": "it_btr_80a_hungary",
+                    "num_appearances": 12
+                },
+                {
+                    "vehicle": "it_vbc_pt2",
+                    "num_appearances": 13
+                },
+                {
+                    "vehicle": "it_of_40_mk_2a",
+                    "num_appearances": 8
+                },
+                {
+                    "vehicle": "it_vcc_80_hitfist_60",
+                    "num_appearances": 33
+                }
+            ],
+            "num_appearances": 124
+        },
+        {
+            "player_id": 57,
+            "vehicles": [
+                {
+                    "vehicle": "germ_leopard_1a5",
+                    "num_appearances": 25
+                },
+                {
+                    "vehicle": "germ_leopard_2k",
+                    "num_appearances": 23
+                }
+            ],
+            "num_appearances": 48
+        },
+        {
+            "player_id": 58,
+            "vehicles": [
+                {
+                    "vehicle": "us_xm_803",
+                    "num_appearances": 32
+                },
+                {
+                    "vehicle": "uh_1b",
+                    "num_appearances": 115
+                }
+            ],
+            "num_appearances": 147
+        },
+        {
+            "player_id": 59,
+            "vehicles": [
+                {
+                    "vehicle": "germ_flakpz_I_Gepard",
+                    "num_appearances": 29
+                },
+                {
+                    "vehicle": "germ_thyssen_henschel_tam_2ip",
+                    "num_appearances": 24
+                }
+            ],
+            "num_appearances": 53
+        },
+        {
+            "player_id": 60,
+            "vehicles": [
+                {
+                    "vehicle": "cn_ztz_88b",
+                    "num_appearances": 33
+                },
+                {
+                    "vehicle": "cn_ptl_02",
+                    "num_appearances": 20
+                },
+                {
+                    "vehicle": "cn_ptz_89",
+                    "num_appearances": 16
+                }
+            ],
+            "num_appearances": 69
+        },
+        {
+            "player_id": 61,
+            "vehicles": [
+                {
+                    "vehicle": "germ_thyssen_henschel_tam_2ip",
+                    "num_appearances": 20
+                }
+            ],
+            "num_appearances": 20
+        },
+        {
+            "player_id": 62,
+            "vehicles": [
+                {
+                    "vehicle": "ussr_zsu_23_4",
+                    "num_appearances": 12
+                },
+                {
+                    "vehicle": "ussr_t_64a_1971",
+                    "num_appearances": 15
+                },
+                {
+                    "vehicle": "ussr_t_72a",
+                    "num_appearances": 25
+                },
+                {
+                    "vehicle": "ussr_bmp_2",
+                    "num_appearances": 31
+                }
+            ],
+            "num_appearances": 83
+        },
+        {
+            "player_id": 123,
+            "vehicles": [
+                {
+                    "vehicle": "ucav_recon_micro",
+                    "num_appearances": 3
+                }
+            ],
+            "num_appearances": 3
+        }
+    ]
+}
