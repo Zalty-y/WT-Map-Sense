@@ -22,13 +22,38 @@ def parse_replay(folder):
 
     for pid in set([p["player_id"] for p in players]):
         vehicles = []
-        for v in list(set([p["vehicle"] for p in players if p["player_id"] == pid])):
-            vehicles.append(
-                {
-                    "vehicle": v,
-                    "num_appearances": len([p for p in players if p["player_id"] == pid and p["vehicle"] == v])
-                }
-            )
+
+        player_data = [p for p in players if p["player_id"] == pid]
+        previous_vehicle = None
+        count = 0
+
+        for entry in player_data:
+            current_vehicle = entry["vehicle"]
+            if current_vehicle != previous_vehicle:
+                if previous_vehicle is not None:
+                    vehicles.append({
+                        "vehicle": previous_vehicle,
+                        "num_appearances": count
+                    })
+                previous_vehicle = current_vehicle
+                count = 1
+            else:
+                count += 1
+
+        if previous_vehicle is not None:
+            vehicles.append({
+                "vehicle": previous_vehicle,
+                "num_appearances": count
+            })
+
+        # for v in list(set([p["vehicle"] for p in players if p["player_id"] == pid])):
+        #     vehicles.append(
+        #         {
+        #             "vehicle": v,
+        #             "num_appearances": len([p for p in players if p["player_id"] == pid and p["vehicle"] == v])
+        #         }
+        #     )
+
         players2.append({
             "player_id" : pid,
             "vehicles": vehicles,

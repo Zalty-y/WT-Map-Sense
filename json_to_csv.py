@@ -31,7 +31,7 @@ def json_to_csv(json_file_path, time_multiplier):
             # entries = data[main_key]
                 
                 # Iterate through each entry and write it to the CSV
-                for entry in entries:
+                for id, entry in enumerate(entries):
                     entry_type = entry.get('type')
 
                     if not entry_type in desired_types:
@@ -39,6 +39,7 @@ def json_to_csv(json_file_path, time_multiplier):
 
                     row = [
                         float(timestamp) * float(time_multiplier),
+                        id,
                         entry_type,
                         entry.get('color'),
                         *entry.get('color[]', [None, None, None]),

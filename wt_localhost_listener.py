@@ -3,14 +3,23 @@ import asyncio
 import time
 import json
 import os
+import math
 
 # URL for War Thunder's localhost server
 player_movement_url = "http://localhost:8111/map_obj.json"
 match_status_url = "http://localhost:8111/map_info.json"
+map_info_url = "http://localhost:8111/map_info.json"
+
 previous_data = None
+map_info = None
 match_active = None
 def_listen_interval = 250
 match_start_time = None
+
+blue = "#185AFF"
+red = "#fa3200"
+team_one = ""
+team_two = ""
 
 async def check_for_update(session):
     global match_active
@@ -29,6 +38,7 @@ async def check_for_update(session):
 async def event_listener():
     global previous_data
     global match_start_time
+    global map_info
     previous_update_time_ms = time.time()
     current_update_time_ms = 0
     total = 0
@@ -45,6 +55,10 @@ async def event_listener():
 
                 if match_active and not match_start_time: #current_data and previous_data is None:
                     print("Match started!")
+
+                    async with session.get(map_info_url) as response:
+                        map_info = await response.json()
+
                     total = 0
                     averageCount = 0
                     listen_interval_ms = def_listen_interval
@@ -56,7 +70,7 @@ async def event_listener():
                     match_start_time = None
                     match_end_time = time.time()
 
-                    # Save the dictionary as JSON to a 
+                    # Save the dictionary as JSON
                     script_dir = os.path.dirname(os.path.abspath(__file__))
                     file_path = os.path.join(script_dir, "TODO_MATCH_ID_" + str(int(time.time())) + ".json")
                     with open(file_path, "w") as file:
@@ -100,6 +114,117 @@ async def append_data(data, new_data):
     if not match_start_time:
         raise Exception("Match has not started!")
     data[round(time.time() - match_start_time, 2)] = new_data
+
+def get_spawns(data):
+    global team_one
+    global team_two
+
+    spawns = {
+        "air": [
+            {
+                "team": 1,
+                "spawns": []
+            },
+            {
+                "team": 2,
+                "spawns": []
+            },
+            {
+                "team": 0,
+                "spawns": []
+            }
+        ],
+        "ground": [
+            {
+                "team": 1,
+                "spawns": []
+            },
+            {
+                "team": 2,
+                "spawns": []
+            },
+            {
+                "team": 0,
+                "spawns": []
+            }
+        ]
+    }
+
+    air_blue = []
+    air_red = []
+    air_neut = []
+
+    ground_blue = []
+    ground_red = []
+    ground_neut = []
+
+    for spawn in data:
+        if spawn["type"] == "airfield":
+            if spawn["color"] is blue:
+                air_blue.append(spawn)
+            elif spawn["color"] is red:
+                air_red.append(spawn)
+            else:
+                air_neut.append(spawn)
+        elif spawn["type"] == "respawn_base_tank":
+            if spawn["color"] is blue:
+                ground_blue.append(spawn)
+            elif spawn["color"] is red:
+                ground_red.append(spawn)
+            else:
+                ground_neut.append(spawn)
+        else:
+            continue
+
+    # Assign team numbers based on spawn location on map.
+    avg_ground_blue = (sum([spawn["x"] for spawn in ground_blue]) / len(ground_blue),
+                      sum([spawn["y"] for spawn in ground_blue]) / len(ground_blue))
+    
+    map_size = map_info["map_max"]
+
+    # The spawns below a line pulled from the top left of the map to the
+    # bottom right will be classified as team one.
+    if (avg_ground_blue[1] <= avg_ground_blue[0]):
+        team_one = blue
+        team_two = red
+        air_team_one = air_blue
+        air_team_two = air_red
+        ground_team_one = ground_blue
+        ground_team_two = ground_red
+    else:
+        team_one = red
+        team_two = blue
+        air_team_one = air_red
+        air_team_two = air_blue
+        ground_team_one = ground_red
+        ground_team_two = ground_blue
+
+    for air_spawn in spawns["air"]:
+        if air_spawn["team"] == 1:
+            air_spawn["spawns"] = air_team_one
+        elif air_spawn["team"] == 2:
+            air_spawn["spawns"] = air_team_two
+        else:
+            air_spawn["spawns"] = air_neut
+
+    for ground_spawn in spawns["ground"]:
+        if ground_spawn["team"] == 1:
+            ground_spawn["spawns"] = ground_team_one
+        elif ground_spawn["team"] == 2:
+            ground_spawn["spawns"] = ground_team_two
+        else:
+            ground_spawn["spawns"] = ground_neut
+        
+    # Save the dictionary as JSON
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, "TODO_MATCH_ID_SPAWNS_" + str(int(time.time())) + ".json")
+    with open(file_path, "w") as file:
+        json.dump(spawns, file, indent=4) 
+
+def vector_angle(a, b):
+    return math.acos((a[0] * b[0] + a[1] * b[1]) /
+                     (math.sqrt(pow(a[0], 2) + pow(a[1], 2)) *
+                      math.sqrt(pow(b[0], 2) + pow(b[1], 2))))
 
 # Run the asynchronous event listener
 asyncio.run(event_listener())
